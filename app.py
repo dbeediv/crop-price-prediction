@@ -17,7 +17,7 @@ import hashlib
 PRIMARY = "#5D4037"      # Warm Cocoa (main)
 ACCENT = "#FFB74D"       # Caramel Gold (accent)
 BG = "#F6EEE6"           # Soft warm background
-CARD_BG = "#FFFFFF"      # Card background (white for contrast)
+CARD_BG = "#FF0000"      # Card background (white for contrast)
 TEXT = "#2E2E2E"         # Main text color
 
 # page config
@@ -815,3 +815,4 @@ elif role_selection == "delivery":
             st.markdown("</div>", unsafe_allow_html=True)
     else:
         st.info("No delivery requests yet.")
+
