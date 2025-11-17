@@ -349,8 +349,14 @@ def signup_page():
     with st.container():
         col1, col2 = st.columns([1,1])
         with col1:
-            username = st.text_input("Choose Username", key="su_username")
-            password = st.text_input("Choose Password", type="password", key="su_password")
+            # Colored Username Label
+            st.markdown("<p style='color:#FF6347; font-size:18px;'>Choose Username</p>", unsafe_allow_html=True)
+            username = st.text_input("", key="su_username", label_visibility="collapsed")
+            
+            # Colored Password Label
+            st.markdown("<p style='color:#1E90FF; font-size:18px;'>Choose Password</p>", unsafe_allow_html=True)
+            password = st.text_input("", type="password", key="su_password", label_visibility="collapsed")
+
         with col2:
             name = st.text_input("Full Name", key="su_name")
             phone = st.text_input("Phone Number", key="su_phone")
@@ -815,4 +821,5 @@ elif role_selection == "delivery":
             st.markdown("</div>", unsafe_allow_html=True)
     else:
         st.info("No delivery requests yet.")
+
 
